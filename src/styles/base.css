@@ -1,0 +1,30 @@
+*,*::before,*::after {box-sizing:border-box}
+html {scroll-behavior:smooth;scroll-padding-top:95px}
+body {margin:0;background:var(--bg);color:var(--text);font-family:var(--font-display);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body.dialog-open {overflow:hidden}
+button,input,textarea {font:inherit}
+button {cursor:pointer}
+a {color:inherit;text-decoration:none}
+img {display:block;max-width:100%}
+::selection {background:var(--purple);color:#090b17}
+:focus-visible {outline:2px solid var(--cyan);outline-offset:5px}
+button:disabled {opacity:.48;cursor:not-allowed}
+[hidden] {display:none !important}
+.shell {width:min(100%,1850px);padding-inline:var(--page-gutter);margin-inline:auto}
+.visually-hidden {position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.skip-link {position:fixed;z-index:300;left:16px;top:-120px;padding:12px 20px;background:var(--cyan);color:var(--bg)}
+.skip-link:focus {top:16px}
+.grain {position:fixed;z-index:150;inset:0;pointer-events:none;opacity:.12;mix-blend-mode:soft-light;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.68' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.52'/%3E%3C/svg%3E")}
+.eyebrow,.section-index,.small-mono,.hero-coordinate,.hero-image-top,.hero-image-bottom,.hero-caption,.hero-bottom,.hero-side-note,.archive-heading-aside,.archive-controls,.gallery-note,.footer-bottom,.footer-top>span,.tiny-hint,.form-dialog-foot,.join-footnote,.contact-coordinate,.about-text .inline-arrow,.field-help,.form-row label,.stacked-form label,.account-dialog h3 {font-family:var(--font-mono);letter-spacing:.055em}
+.eyebrow {font-size:11px;font-weight:400;letter-spacing:.105em}
+.cyan {color:var(--cyan)}
+.period {color:var(--cyan)}
+.section-block {position:relative}
+.reveal {opacity:0;transform:translateY(44px);transition:opacity .85s var(--ease),transform 1.05s var(--ease)}
+.reveal.in-view {opacity:1;transform:translateY(0)}
+.toast {position:fixed;z-index:250;right:22px;bottom:22px;max-width:min(420px,calc(100vw - 44px));padding:15px 20px;background:#1b2340;color:var(--text);border:1px solid rgba(105,214,229,.5);box-shadow:0 18px 80px #0009;font-size:13px;opacity:0;transform:translateY(15px);pointer-events:none;transition:opacity .2s,transform .2s}
+.toast.show {opacity:1;transform:translateY(0)}
+.pulse-dot,.little-live {display:inline-block;width:6px;height:6px;background:var(--cyan);border-radius:50%;box-shadow:0 0 0 4px rgba(105,214,229,.1);margin-right:7px}
+.pulse-dot {animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px rgba(105,214,229,0);opacity:.65}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}}

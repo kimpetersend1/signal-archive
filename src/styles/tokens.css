@@ -1,0 +1,16 @@
+:root {
+  color-scheme: dark;
+  --bg: #080b14;
+  --bg-raised: #111525;
+  --panel: #14192a;
+  --purple: #8f84e8;
+  --cyan: #69d6e5;
+  --text: #f4f2fb;
+  --muted: #8f94a8;
+  --line: rgba(176,190,218,.17);
+  --soft-line: rgba(176,190,218,.085);
+  --font-display: 'Space Grotesk', Arial, sans-serif;
+  --font-mono: 'DM Mono', monospace;
+  --page-gutter: clamp(20px,4.15vw,84px);
+  --ease: cubic-bezier(.19,1,.22,1);
+}
